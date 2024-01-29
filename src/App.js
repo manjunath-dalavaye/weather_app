@@ -8,7 +8,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const apiKey = "92e74ee899264aa79a5142100242901"; // Replace with your actual API key
+  const apiKey = "92e74ee899264aa79a5142100242901";
 
   const searchWeather = () => {
     setLoading(true);
@@ -22,7 +22,6 @@ function App() {
         setLoading(false);
 
         if (data.error) {
-          // setError('Failed to fetch weather data. Please check the city name and try again.');
           alert("Failed to fetch weather data.");
         } else {
           setWeatherData(data);
@@ -70,7 +69,7 @@ function App() {
             </div>
             <div className="weather-box">
               <p>
-               <strong> Wind Speed </strong><br /> 
+                <strong>Wind Speed</strong> <br />
                 {weatherData.current.wind_kph} km/h
               </p>
             </div>
